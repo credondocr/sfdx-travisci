@@ -17,7 +17,7 @@ before_install:
 - export PATH=./sfdx/$(pwd):$PATH
 - sfdx --version
 - sfdx plugins --core
-- sfdx force:auth:jwt:grant --clientid 3MVG99E3Ry5mh4zp7xU0Aapm6VbiTADiUwDuOa.4Lr2gYkJkxpvC9M1v4HNn1HizC623R9jJ3v4n_TfcB.nmj --jwtkeyfile assets/server.key.enc --username cesar.redondo@lumerit.com.fullbox --instanceurl https://test.salesforce.com -a HubOrg --setdefaultdevhubusername
+- sfdx force:auth:jwt:grant --clientid 3MVG99E3Ry5mh4zp7xU0Aapm6VbiTADiUwDuOa.4Lr2gYkJkxpvC9M1v4HNn1HizC623R9jJ3v4n_TfcB.nmj --jwtkeyfile assets/server.key --username cesar.redondo@lumerit.com.fullbox --instanceurl https://test.salesforce.com -a HubOrg --setdefaultdevhubusername
 script:
 - sfdx force:org:create -v HubOrg -s -f config/project-scratch-def.json -a ciorg --wait
   2
